@@ -54,6 +54,31 @@ QuizModel loadQuestion(int numbQuestion) {
         "2 Grad",
         ["3 Grad", "4 Grad", "Ein Grad"]
     ),
+    QuizModel(
+        "Welchen Anteil hat unsere Ernährung auf die Treibhausemissionen?",
+        "21 bis 37 Prozent",
+        ["10 bis 15 Prozent", "54 bis 62 Prozent", "Mehr als 75 Prozent"]
+    ),
+    QuizModel(
+        "Wie viele Landwirtschaftsflächen sind in Deutschland Bio?",
+        "11 Prozent",
+        ["18 Prozent", "29 Prozent", "35 Prozent"]
+    ),
+    QuizModel(
+        "Womit kann man seinen ökologischen Fußabdruck reduzieren?",
+        "Weniger Fleisch essen",
+        ["Nur Rindfleisch essen", "Kein Hühnchenfleisch essen", "Nur Schweinefleisch essen"]
+    ),
+    QuizModel(
+        "Wie kann man Fleischkonsum nachhaltig gestalten?",
+        "Regionale Produkte kaufen",
+        ["Möglichst billig kaufen", "Auf Vorrat kaufen", "Aus anderen Ländern kaufen"]
+    ),
+    QuizModel(
+        "Welche Produkte gelten als gesund und nachhaltig?",
+        "Bio",
+        ["Billig", "Teuer", "Amerikanische Produkte"]
+    ),
   ];
 
   return questionList[numbQuestion];

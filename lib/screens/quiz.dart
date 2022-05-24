@@ -20,6 +20,7 @@ class QuizScreenState extends State<QuizScreen> {
   int score = 0;
   int numbQuestion = 0;
   int numbAllQuestions = 10;
+  late List<int> questionSelection;
   late QuizModel currentQuestion;
   late List<String> answers;
   List<bool?> answerValidation = [null, null, null, null];
@@ -27,6 +28,7 @@ class QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
 
+    questionSelection = getRandomQuestionIndex();
     loadNewQuestion();
     super.initState();
   }
@@ -37,7 +39,7 @@ class QuizScreenState extends State<QuizScreen> {
 
       if(numbQuestion < numbAllQuestions) {
 
-        currentQuestion = loadQuestion(numbQuestion);
+        currentQuestion = loadQuestion(questionSelection[numbQuestion]);
         answers = getRandomAnswers(currentQuestion.correctAnswer, currentQuestion.wrongAnswers);
         numbQuestion++;
         answerValidation = [null, null, null, null];

@@ -1,3 +1,8 @@
+import 'dart:math';
+
+import 'package:kahoot_demo/data/questions.dart';
+import 'package:kahoot_demo/model/quizmodel.dart';
+
 List<String> getRandomAnswers(String correctAnswer, List<String> wrongAnswers) {
 
   List<String> allAnswers = <String>[];
@@ -19,4 +24,12 @@ int getCorrectAnswerIndex(List<String> answers, String correctAnswer) {
   }
 
   return -1;
+}
+
+List<int> getRandomQuestionIndex() {
+
+  List<int> selection = List<int>.generate(15, (index) => index);
+  selection.shuffle();
+
+  return selection;
 }
